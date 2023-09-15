@@ -80,15 +80,17 @@ label{
     justify-content: space-evenly;
     font-size: 1.6rem;
     vertical-align: center;
+    flex-direction: column;
 }
 
 .opcion-eliminar{
     color: red;
+    cursor: pointer;
 }
 
 .informacion-notas{
-    text-align: center;
-    align-self: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .resultado{

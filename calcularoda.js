@@ -4,12 +4,18 @@ let matematicas = 0;
 let ingles = 0;
 let geografia = 0;
 
+
+
 function agregarInfo() {
-    const materiainput=document.getElementById('materia').value
-     materias=materiainput
-    const notasinput=document.getElementById('calificaciones').value
-     notas.push(parseInt(notasinput))
-     console.log(materias ,notas)
+    const materiainput = document.getElementById('materia').value
+    materias = materiainput
+
+    const notasinput = document.getElementById('calificaciones').value
+    notas.push(parseInt(notasinput,notasinput))
+
+    imprimirInfo(materiainput,notasinput)
+
+    console.log(materias ,notasinput)
 }
 
 function calcularPromedio() {
@@ -39,3 +45,25 @@ function calcularPromedio() {
     }
 }
 
+function imprimirInfo(valorMateria,valorNota) {
+    const contenedorInfo = document.createElement('div')
+    contenedorInfo.classList.add('informacion-notas')
+
+    const mostrarMateria = document.createElement('p')
+    const mostrarNota = document.createElement('p')
+
+    const opcionEliminar = document.createElement('span')
+    opcionEliminar.classList.add('opcion-eliminar')
+
+    mostrarMateria.textContent = valorMateria
+    mostrarNota.textContent = valorNota
+    opcionEliminar.textContent = 'Eliminar'
+
+    //Construccion HTML
+    const contenedorInfoNotas = document.querySelector('.contenedor-informacion-notas')
+
+
+    contenedorInfo.append(mostrarMateria,mostrarNota,opcionEliminar)
+
+    contenedorInfoNotas.appendChild(contenedorInfo)
+}
