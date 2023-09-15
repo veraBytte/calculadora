@@ -8,7 +8,7 @@ function agregarInfo() {
     const materiainput=document.getElementById('materia').value
      materias=materiainput
     const notasinput=document.getElementById('calificaciones').value
-     notas.push(notasinput)
+     notas.push(parseInt(notasinput))
      console.log(materias ,notas)
 }
 
