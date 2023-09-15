@@ -53,6 +53,9 @@ label{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    border: solid 2px #ada8a8;
+    padding: 24px;
+    border-radius: 10px;
 }
 
 .ingreso-datos{
@@ -86,4 +89,9 @@ label{
 .informacion-notas{
     text-align: center;
     align-self: center;
+}
+
+.resultado{
+    font-weight: bold;
+    font-size: 1.6rem;
 }
