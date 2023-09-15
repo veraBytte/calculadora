@@ -4,7 +4,7 @@ let matematicas = 0;
 let ingles = 0;
 let geografia = 0;
 
-
+const parrafoResultado = document.getElementById('parrafoResultado')
 
 function agregarInfo() {
     const materiainput = document.getElementById('materia').value
@@ -21,9 +21,11 @@ function agregarInfo() {
 function calcularPromedio() {
 
     if (notas.length > 0) {
-        const suma = notas.reduce((total, numero) => total + numero, 0);
-        const total=suma / notas.length;
+
+        const suma = parseFloat(notas.reduce((total, numero) => total + numero, 0));
+        const total = suma / notas.length;
         const promedio = total.toFixed(1)
+
         switch (materias) {
             case "matematicas":
                 matematicas = promedio;
@@ -38,8 +40,11 @@ function calcularPromedio() {
                 materias = "";
                 break;
         }
-      
+        
         console.log(promedio, materias);
+        // parrafoResultado.textContent = `El promedio de ${materias} es ${promedio}`
+
+
     } else {
         console.log('no válido');
     }
