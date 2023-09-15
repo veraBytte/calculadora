@@ -22,9 +22,9 @@
 
             <div class="ingreso-datos">
                 <label for="">Calificacion</label>
-                <input type="number" placeholder="Calificacion">
+                <input type="number" placeholder="Calificacion" id="calificaciones">
             </div>
-            <button class="boton">Añadir</button>
+            <button class="boton" onclick="agregarInfo()">Añadir</button>
         </div>
 
         <div class="contenedor-informacion-notas">
@@ -35,7 +35,7 @@
             </div>
             <span class="opcion-eliminar">Eliminar</span>
         </div>
-        <button class="boton">Calcular</button>
+        <button class="boton" onclick="calcularPromedio()">Calcular</button>
         <p class="resultado">Tu promedio es : <span>RESULTADO</span> </p>
     </section>
 </body>
