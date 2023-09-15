@@ -70,3 +70,20 @@ label{
     outline: none;
 }
 
+.contenedor-informacion-notas{
+    margin: 0 auto;
+    display: inline-flex;
+    width: 300px;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+    vertical-align: center;
+}
+
+.opcion-eliminar{
+    color: red;
+}
+
+.informacion-notas{
+    text-align: center;
+    align-self: center;
+}
